@@ -5,11 +5,7 @@ import { Redis } from "ioredis";
 const { Pool } = pg;
 
 const pool = new Pool({
-  user: "root",
-  password: "root@123",
-  host: "localhost",
-  port: "5432",
-  database: "whizlabs_task"
+  connectionString: process.env.POSTGRES_URL + "?sslmode=require",
 })
 
 // Redis Connection
