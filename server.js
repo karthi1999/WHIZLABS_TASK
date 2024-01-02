@@ -24,6 +24,6 @@ app.use('/employee', employeesRouter);
 
 app.use(errorHandler)
 
-app.listen(5000, () => {
+app.listen(process.env.PORT, () => {
   console.log('Successfully started server on port 5000');
 });
